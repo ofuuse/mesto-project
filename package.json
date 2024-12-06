@@ -1,7 +1,7 @@
 {
   "name": "mesto-project",
   "version": "1.0.0",
-  "description": "студент, когорта, стэк",
+  "description": "https://github.com/ofuuse/mesto-project",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -11,7 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "Durynichev Dmitriy",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.26.0",
