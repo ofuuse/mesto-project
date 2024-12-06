@@ -44,8 +44,7 @@ npm run build
 ```
 
 ## Ссылки
-- [Проект на GitHub Pages][(https://ofuuse.github.io/mesto-project)/)](https://ofuuse.github.io/mesto-project)
-
+- [Проект на GitHub Pages](https://ofuuse.github.io/mesto-project/)
 ## Автор
 - Студент: Дурыничев Дмитрий Андреевич
 - Группа: 3822Б1ПР3
