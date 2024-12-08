@@ -91,7 +91,17 @@ fetchInitialCardsData()
     console.error(`Ошибка загрузки карточек: ${err}`);
   });
 
-  // Открытие изображения
+// Генерация карточки (функция исправлена)
+function generateCard(cardData, userId) {
+  const cardTemplate = document.querySelector('#card-template').content;
+  const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
+  const cardImage = cardElement.querySelector('.card__image');
+  const cardTitle = cardElement.querySelector('.card__title');
+
+  cardImage.src = cardData.link;
+  cardImage.alt = cardData.name;
+  cardTitle.textContent = cardData.name;
+
   cardImage.addEventListener('click', () => {
     const popupImage = imageViewPopup.querySelector('.popup__image');
     const popupCaption = imageViewPopup.querySelector('.popup__caption');
@@ -189,9 +199,10 @@ avatarForm.addEventListener('submit', (evt) => {
       submitButton.textContent = 'Сохранить';
     });
 });
+
 // Проверка валидации аватара
-const avatarUrlInput = avatarForm.querySelector('.popup__input_type_avatar-url');  avatarUrlInput.addEventListener('input', () => {
+avatarUrlInput.addEventListener('input', () => {
   const inputs = [avatarUrlInput];
   const submitButton = avatarForm.querySelector('.popup__button');
-  toggleButtonState(inputs, submitButton);
+  toggleSubmitButtonState(inputs, submitButton);
 });
